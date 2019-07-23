@@ -5,13 +5,15 @@ require_relative('../Fish.rb')
 class FishTest < MiniTest::Test
 
   def setup()
-    @fish1 = Fish.new("Sushi")
-    @fish2 = Fish.new("Casper")
-    @fish3 = Fish.new("Nemo")
-
+    @fish = Fish.new("Sushi")
   end
+
+  def test_can_create_person()
+    assert_equal(Fish, @fish.class())
+  end
+
   def test_get_name()
-    assert_equal("Sushi", @fish1.name)
+    assert_equal("Sushi", @fish.name)
   end
 
 end
