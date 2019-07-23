@@ -15,4 +15,8 @@ class Bear
     return @stomach.length
   end
 
+  def add_to_fishes(fish)
+      return @stomach.push(fish)
+  end
+
 end
